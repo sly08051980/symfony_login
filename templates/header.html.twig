@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">Navbar</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Livres
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li>
+                        {% if app.user and 'ROLE_ADMIN' in app.user.getroles()%}
+							<a class="liens" href='#'>Tous les livres</a>
+						</li>
+                         {% endif %}
+						<li>
+							<a class="liens" href='#'>Par titre</a>
+						</li>
+						<li>
+							<a class="liens" href='#'>Par Auteur</a>
+						</li>
+						<li>
+							<a class="liens" href='#'>Par Editeur</a>
+						</li>
+
+					</ul>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Fournisseurs
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li>
+							<a class="liens" href='#'>Tous les
+								                Fournisseurs</a>
+						</li>
+						<li>
+							<a class="liens" href='#'>Raison
+								                Social</a>
+						</li>
+						<li>
+							<a class="liens" href='#'>Localité</a>
+						</li>
+						<li>
+							<a class="liens" href='#'>pays</a>
+							
+						</li>
+
+					</ul>
+				</li>
+
+                    <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Commandes
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li>
+							<a class="liens" href='#'>Toutes les
+                commandes</a>
+						</li>
+						<li>
+							<a class="liens" href="">Commande
+                Par editeur</a>
+						</li>
+						<li>
+							<a class="liens" href="">Commande Par
+                fournisseur</a>
+						</li>
+						<li>
+							<a class="liens" href='#'>Commande
+                Par dates</a>
+						</li>
+
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
